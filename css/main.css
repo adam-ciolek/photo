@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 10px;
+  color: #fff;
+  background-color: #050505;
+}
+
+.background {
+  background-image: url("../assets/bg-front.png");
+  min-height: 110vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  -webkit-clip-path: polygon(50% 90%, 0 100%, 100% 100%);
+          clip-path: polygon(50% 90%, 0 100%, 100% 100%);
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #050505;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+.shadow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  inset: 0;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.nav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+.nav__logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 4.8rem;
+}
+
+.nav__hamburger {
+  cursor: pointer;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+}
+
+.hero__title {
+  font-family: "Dancing Script", cursive;
+  font-size: 4.8rem;
+  font-weight: 400;
+  margin-top: 17.8rem;
+  text-align: center;
+}
+
+.hero__subtitle {
+  text-align: center;
+  font-size: 9.6rem;
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+}
+
+.hero__underline {
+  text-align: center;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+/*# sourceMappingURL=main.css.map */

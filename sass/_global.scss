@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 10px;
+	color: #fff;
+	background-color: hsl(0, 0%, 2%);
+}
+
+.background {
+	background-image: url("../assets/bg-front.png");
+	min-height: 110vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		clip-path: polygon(50% 90%, 0 100%, 100% 100%);
+		bottom: -1rem;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 600px;
+		background-color: hsl(0, 0%, 2%);
+	}
+}
+
+section {
+	margin-top: 8rem;
+}
+
+.shadow {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.4);
+	inset: 0;
+}
+
+.container {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+li {
+	list-style: none;
+}
+
+// font
+
+// font-family: 'Dancing Script', cursive;
+// font-family: 'David Libre', serif;
