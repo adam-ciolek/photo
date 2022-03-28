@@ -9,6 +9,7 @@ body {
 	font-size: 10px;
 	color: #fff;
 	background-color: hsl(0, 0%, 2%);
+	overflow-x: hidden;
 }
 
 .background {
@@ -17,7 +18,6 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
 	position: relative;
 
 	&::before {
@@ -30,6 +30,47 @@ body {
 		width: 100%;
 		height: 600px;
 		background-color: hsl(0, 0%, 2%);
+	}
+}
+
+.open-background {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 10;
+
+	&__top {
+		display: flex;
+		min-height: 100%;
+		position: relative;
+
+		h2 {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 8.9rem;
+			letter-spacing: 1.6px;
+		}
+
+		&__one {
+			background: black;
+			flex: 1;
+		}
+		&__two {
+			background: black;
+			flex: 1;
+		}
+		&__three {
+			background: black;
+			flex: 1;
+		}
+		&__four {
+			background: black;
+			flex: 1;
+		}
 	}
 }
 
@@ -61,3 +102,6 @@ li {
 
 // font-family: 'Dancing Script', cursive;
 // font-family: 'David Libre', serif;
+.i {
+	min-height: 100vh;
+}

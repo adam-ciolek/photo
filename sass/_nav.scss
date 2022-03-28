@@ -1,3 +1,13 @@
+.nav-background--show {
+	background: rgba(0, 0, 0, 0.198);
+	z-index: 100;
+	min-height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
 .nav {
 	@include z-index;
 	position: fixed;
@@ -13,9 +23,13 @@
 	&__logo {
 		font-family: "Dancing Script", cursive;
 		font-size: 4.8rem;
+		transition: all 0.5s ease;
+		opacity: 0;
 	}
 
 	&__hamburger {
 		cursor: pointer;
+		transition: all 0.5s ease;
+		opacity: 0;
 	}
 }
