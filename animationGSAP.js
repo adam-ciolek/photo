@@ -123,8 +123,8 @@ function aniamteGalleryWords() {
 
 // Invoked all animation
 export function init() {
-	// animationTop();
-	// animationBackground();
-	// animationShowNav();
+	animationTop();
+	animationBackground();
+	animationShowNav();
 	aniamteGalleryWords();
 }

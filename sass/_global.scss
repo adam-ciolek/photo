@@ -47,46 +47,46 @@ body {
 	}
 }
 
-// .open-background {
-// 	position: fixed;
-// 	inset: 0;
-// 	width: 100%;
-// 	min-height: 100vh;
-// 	z-index: 10;
+.open-background {
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	min-height: 100vh;
+	z-index: 10;
 
-// 	&__top {
-// 		display: flex;
-// 		min-height: 100%;
-// 		position: relative;
+	&__top {
+		display: flex;
+		min-height: 100%;
+		position: relative;
 
-// 		h2 {
-// 			content: "";
-// 			position: absolute;
-// 			left: 50%;
-// 			top: 50%;
-// 			transform: translate(-50%, -50%);
-// 			font-size: 8.9rem;
-// 			letter-spacing: 1.6px;
-// 		}
+		h2 {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 8.9rem;
+			letter-spacing: 1.6px;
+		}
 
-// 		&__one {
-// 			background: black;
-// 			flex: 1;
-// 		}
-// 		&__two {
-// 			background: black;
-// 			flex: 1;
-// 		}
-// 		&__three {
-// 			background: black;
-// 			flex: 1;
-// 		}
-// 		&__four {
-// 			background: black;
-// 			flex: 1;
-// 		}
-// 	}
-// }
+		&__one {
+			background: black;
+			flex: 1;
+		}
+		&__two {
+			background: black;
+			flex: 1;
+		}
+		&__three {
+			background: black;
+			flex: 1;
+		}
+		&__four {
+			background: black;
+			flex: 1;
+		}
+	}
+}
 
 section {
 	margin-top: 20rem;
