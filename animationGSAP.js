@@ -55,9 +55,76 @@ function animationShowNav() {
 }
 // ------END -------
 
+// animation when all page is loaded
+
+function aniamteGalleryWords() {
+	gsap.to(".gallery__one__title", {
+		scrollTrigger: {
+			trigger: ".gallery__one__title",
+			start: "-=400px 300px",
+			end: "-=200px 400px",
+		},
+		y: "-70%",
+		duration: 1,
+		opacity: 1,
+	});
+
+	gsap.to(".gallery__one__right", {
+		scrollTrigger: {
+			trigger: ".gallery__one__right",
+			start: "top 400px",
+			end: "100px 430px",
+		},
+		scale: 1,
+		duration: 1,
+	});
+
+	gsap.to(".gallery__one__left", {
+		scrollTrigger: {
+			trigger: ".gallery__one__left",
+			start: "top 400px",
+			end: "100px 430px",
+		},
+		scale: 1,
+		duration: 1,
+	});
+
+	gsap.to(".gallery__two__title", {
+		scrollTrigger: {
+			trigger: ".gallery__two__title",
+			start: "-=400px 300px",
+			end: "-=200px 400px",
+		},
+		y: "-70%",
+		duration: 1,
+		opacity: 1,
+	});
+
+	gsap.to(".gallery__two__left", {
+		scrollTrigger: {
+			trigger: ".gallery__two__left",
+			start: "top 400px",
+			end: "100px 430px",
+		},
+		scale: 1,
+		duration: 1,
+	});
+
+	gsap.to(".gallery__two__right", {
+		scrollTrigger: {
+			trigger: ".gallery__two__right",
+			start: "top 400px",
+			end: "100px 430px",
+		},
+		scale: 1,
+		duration: 1,
+	});
+}
+
 // Invoked all animation
 export function init() {
-	animationTop();
-	animationBackground();
-	animationShowNav();
+	// animationTop();
+	// animationBackground();
+	// animationShowNav();
+	aniamteGalleryWords();
 }

@@ -1,0 +1,73 @@
+.about-title {
+	@include title;
+}
+
+.about {
+	margin-top: 10rem;
+	display: flex;
+
+	&__me {
+		flex: 1;
+		align-self: center;
+		&__box {
+			margin-left: 20rem;
+
+			&__link {
+				font-size: 1.9rem;
+				letter-spacing: 1.2px;
+				border: 1px solid white;
+				padding: 1.5rem 4.5rem;
+				font-family: "David Libre", serif;
+				letter-spacing: 1.4px;
+				opacity: 0.9;
+			}
+		}
+
+		&__name {
+			font-size: 5rem;
+			font-family: "Dancing Script", cursive;
+			opacity: 0.9;
+		}
+
+		&__text {
+			margin: 3rem 0 6rem;
+			max-width: 90%;
+			font-size: 1.9rem;
+			text-align: start;
+			line-height: 31.75px;
+			letter-spacing: 1.2px;
+			font-family: "David Libre", serif;
+			letter-spacing: 1.4px;
+			opacity: 0.9;
+		}
+	}
+
+	&__img {
+		flex: 1;
+
+		&__box {
+			position: relative;
+
+			&__dec {
+				width: 30%;
+				position: absolute;
+
+				&--one {
+					top: -3rem;
+					right: 4rem;
+				}
+
+				&--two {
+					bottom: -3rem;
+					left: 3rem;
+				}
+			}
+		}
+
+		img {
+			margin: 0 auto;
+			width: 60%;
+			z-index: 10;
+		}
+	}
+}

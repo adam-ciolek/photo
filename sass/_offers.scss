@@ -1,0 +1,45 @@
+.offert-title {
+	@include title;
+}
+
+.offers {
+	font-family: "David Libre", serif;
+	letter-spacing: 1.4px;
+	&__cards {
+		display: flex;
+		min-height: 100vh;
+		justify-content: center;
+
+		&__two {
+			align-self: center;
+		}
+
+		&__three {
+			align-self: flex-end;
+		}
+
+		img {
+			filter: grayscale(100%);
+			cursor: pointer;
+			transition: all 0.5s ease-in-out;
+
+			&:hover {
+				outline: 2px solid white;
+				outline-offset: -20px;
+				filter: grayscale(0);
+			}
+		}
+	}
+}
+
+.text {
+	position: absolute;
+	bottom: 20%;
+	right: 2.2rem;
+	font-size: 4.4rem;
+}
+
+.position {
+	width: 80%;
+	position: relative;
+}

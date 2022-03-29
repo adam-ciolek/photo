@@ -1,0 +1,107 @@
+.gallery {
+	&__one {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		flex-direction: column;
+
+		@media screen and (min-width: 550px) {
+			flex-direction: row;
+		}
+
+		&__title {
+			position: absolute;
+			left: 30%;
+			top: 40%;
+			font-size: 2.3rem;
+			font-family: "David Libre", serif;
+			opacity: 0;
+			z-index: 10;
+
+			@media screen and (min-width: 550px) {
+				display: flex;
+				font-size: 3rem;
+			}
+
+			@media screen and (min-width: 1024px) {
+				display: flex;
+				font-size: 5rem;
+			}
+
+			@media screen and (min-width: 1600px) {
+				display: flex;
+				font-size: 6.8rem;
+			}
+		}
+
+		&__left {
+			flex-basis: 45%;
+			transform: scale(0.8);
+		}
+		&__right {
+			flex-basis: 45%;
+			transform: scale(0.8);
+
+			@media screen and (min-width: 550px) {
+				flex-basis: 40%;
+				margin-right: 4rem;
+			}
+		}
+	}
+
+	&__two {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		flex-direction: column;
+
+		@media screen and (min-width: 550px) {
+			flex-direction: row;
+			margin-top: 4rem;
+		}
+
+		&__title {
+			position: absolute;
+			right: 7%;
+			top: 70%;
+			font-size: 2.3rem;
+			font-family: "David Libre", serif;
+			opacity: 0;
+			z-index: 10;
+
+			@media screen and (min-width: 550px) {
+				display: flex;
+				font-size: 3rem;
+				right: 10%;
+			}
+
+			@media screen and (min-width: 1024px) {
+				display: flex;
+				font-size: 5rem;
+			}
+
+			@media screen and (min-width: 1600px) {
+				display: flex;
+				font-size: 6.8rem;
+			}
+		}
+
+		&__left {
+			flex-basis: 45%;
+			transform: scale(0.8);
+		}
+		&__right {
+			flex-basis: 40%;
+			transform: scale(0.8);
+
+			@media screen and (min-width: 550px) {
+				margin-right: 4rem;
+				flex-basis: 40%;
+			}
+
+			img {
+				width: 55%;
+			}
+		}
+	}
+}

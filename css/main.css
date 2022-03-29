@@ -13,6 +13,20 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #0000000c;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0000000c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.801);
+  border-radius: 10px;
+}
+
 .background {
   background-image: url("../assets/bg-front.png");
   min-height: 110vh;
@@ -25,73 +39,18 @@ body {
 .background::before {
   content: "";
   position: absolute;
-  -webkit-clip-path: polygon(50% 90%, 0 100%, 100% 100%);
-          clip-path: polygon(50% 90%, 0 100%, 100% 100%);
-  bottom: -1rem;
+  bottom: -2rem;
   left: 0;
   right: 0;
   width: 100%;
-  height: 600px;
+  height: 60px;
   background-color: #050505;
-}
-
-.open-background {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  min-height: 100vh;
-  z-index: 10;
-}
-
-.open-background__top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100%;
-  position: relative;
-}
-
-.open-background__top h2 {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 8.9rem;
-  letter-spacing: 1.6px;
-}
-
-.open-background__top__one {
-  background: black;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.open-background__top__two {
-  background: black;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.open-background__top__three {
-  background: black;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.open-background__top__four {
-  background: black;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
 }
 
 section {
-  margin-top: 8rem;
+  margin-top: 20rem;
 }
 
 .shadow {
@@ -114,8 +73,10 @@ li {
   list-style: none;
 }
 
-.i {
-  min-height: 100vh;
+img {
+  width: 100%;
+  display: block;
+  height: auto;
 }
 
 .nav-background--show {
@@ -152,14 +113,12 @@ li {
   font-size: 4.8rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  opacity: 0;
 }
 
 .nav__hamburger {
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  opacity: 0;
 }
 
 .hero {
@@ -175,17 +134,42 @@ li {
 
 .hero__title {
   font-family: "Dancing Script", cursive;
-  font-size: 4.8rem;
+  font-size: 3.8rem;
   font-weight: 400;
   margin-top: 17.8rem;
   text-align: center;
 }
 
+@media screen and (min-width: 550px) {
+  .hero__title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 4.8rem;
+  }
+}
+
 .hero__subtitle {
+  margin-top: 4rem;
   text-align: center;
-  font-size: 9.6rem;
+  font-size: 5.4rem;
   font-weight: 700;
   font-family: "Dancing Script", cursive;
+}
+
+@media screen and (min-width: 550px) {
+  .hero__subtitle {
+    font-size: 6.6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__subtitle {
+    font-size: 7.6rem;
+  }
 }
 
 .hero__underline {
@@ -199,7 +183,380 @@ li {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  opacity: 0;
   cursor: pointer;
+}
+
+.gallery__one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 550px) {
+  .gallery__one {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.gallery__one__title {
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  font-size: 2.3rem;
+  font-family: "David Libre", serif;
+  opacity: 0;
+  z-index: 10;
+}
+
+@media screen and (min-width: 550px) {
+  .gallery__one__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gallery__one__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .gallery__one__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 6.8rem;
+  }
+}
+
+.gallery__one__left {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.gallery__one__right {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+@media screen and (min-width: 550px) {
+  .gallery__one__right {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin-right: 4rem;
+  }
+}
+
+.gallery__two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 550px) {
+  .gallery__two {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 4rem;
+  }
+}
+
+.gallery__two__title {
+  position: absolute;
+  right: 7%;
+  top: 70%;
+  font-size: 2.3rem;
+  font-family: "David Libre", serif;
+  opacity: 0;
+  z-index: 10;
+}
+
+@media screen and (min-width: 550px) {
+  .gallery__two__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 3rem;
+    right: 10%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gallery__two__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .gallery__two__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 6.8rem;
+  }
+}
+
+.gallery__two__left {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.gallery__two__right {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+@media screen and (min-width: 550px) {
+  .gallery__two__right {
+    margin-right: 4rem;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+
+.gallery__two__right img {
+  width: 55%;
+}
+
+.offert-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 5.6rem;
+  font-family: "Dancing Script", cursive;
+  opacity: 0.9;
+}
+
+.offers {
+  font-family: "David Libre", serif;
+  letter-spacing: 1.4px;
+}
+
+.offers__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.offers__cards__two {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.offers__cards__three {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.offers__cards img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.offers__cards img:hover {
+  outline: 2px solid white;
+  outline-offset: -20px;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.text {
+  position: absolute;
+  bottom: 20%;
+  right: 2.2rem;
+  font-size: 4.4rem;
+}
+
+.position {
+  width: 80%;
+  position: relative;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 5.6rem;
+  font-family: "Dancing Script", cursive;
+  opacity: 0.9;
+}
+
+.about {
+  margin-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__me {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.about__me__box {
+  margin-left: 20rem;
+}
+
+.about__me__box__link {
+  font-size: 1.9rem;
+  letter-spacing: 1.2px;
+  border: 1px solid white;
+  padding: 1.5rem 4.5rem;
+  font-family: "David Libre", serif;
+  letter-spacing: 1.4px;
+  opacity: 0.9;
+}
+
+.about__me__name {
+  font-size: 5rem;
+  font-family: "Dancing Script", cursive;
+  opacity: 0.9;
+}
+
+.about__me__text {
+  margin: 3rem 0 6rem;
+  max-width: 90%;
+  font-size: 1.9rem;
+  text-align: start;
+  line-height: 31.75px;
+  letter-spacing: 1.2px;
+  font-family: "David Libre", serif;
+  letter-spacing: 1.4px;
+  opacity: 0.9;
+}
+
+.about__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.about__img__box {
+  position: relative;
+}
+
+.about__img__box__dec {
+  width: 30%;
+  position: absolute;
+}
+
+.about__img__box__dec--one {
+  top: -3rem;
+  right: 4rem;
+}
+
+.about__img__box__dec--two {
+  bottom: -3rem;
+  left: 3rem;
+}
+
+.about__img img {
+  margin: 0 auto;
+  width: 60%;
+  z-index: 10;
+}
+
+.social-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 5.6rem;
+  font-family: "Dancing Script", cursive;
+  opacity: 0.9;
+}
+
+.social {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.social a {
+  font-size: 8rem;
+  letter-spacing: 2rem;
+  line-height: 1.9;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.9;
+}
+
+.social a::after {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.social a:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  top: 50%;
+  left: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.315);
+  margin: 8rem 0 3rem;
+  text-align: center;
+  padding: 3rem 0 0 0;
+  font-size: 1.3rem;
+  text-transform: capitalize;
 }
 /*# sourceMappingURL=main.css.map */

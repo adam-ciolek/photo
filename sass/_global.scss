@@ -12,6 +12,20 @@ body {
 	overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: #0000000c;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #0000000c;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.801);
+	border-radius: 10px;
+}
+
 .background {
 	background-image: url("../assets/bg-front.png");
 	min-height: 110vh;
@@ -23,59 +37,59 @@ body {
 	&::before {
 		content: "";
 		position: absolute;
-		clip-path: polygon(50% 90%, 0 100%, 100% 100%);
-		bottom: -1rem;
+		bottom: -2rem;
 		left: 0;
 		right: 0;
 		width: 100%;
-		height: 600px;
+		height: 60px;
 		background-color: hsl(0, 0%, 2%);
+		filter: blur(1rem);
 	}
 }
 
-.open-background {
-	position: fixed;
-	inset: 0;
-	width: 100%;
-	min-height: 100vh;
-	z-index: 10;
+// .open-background {
+// 	position: fixed;
+// 	inset: 0;
+// 	width: 100%;
+// 	min-height: 100vh;
+// 	z-index: 10;
 
-	&__top {
-		display: flex;
-		min-height: 100%;
-		position: relative;
+// 	&__top {
+// 		display: flex;
+// 		min-height: 100%;
+// 		position: relative;
 
-		h2 {
-			content: "";
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			font-size: 8.9rem;
-			letter-spacing: 1.6px;
-		}
+// 		h2 {
+// 			content: "";
+// 			position: absolute;
+// 			left: 50%;
+// 			top: 50%;
+// 			transform: translate(-50%, -50%);
+// 			font-size: 8.9rem;
+// 			letter-spacing: 1.6px;
+// 		}
 
-		&__one {
-			background: black;
-			flex: 1;
-		}
-		&__two {
-			background: black;
-			flex: 1;
-		}
-		&__three {
-			background: black;
-			flex: 1;
-		}
-		&__four {
-			background: black;
-			flex: 1;
-		}
-	}
-}
+// 		&__one {
+// 			background: black;
+// 			flex: 1;
+// 		}
+// 		&__two {
+// 			background: black;
+// 			flex: 1;
+// 		}
+// 		&__three {
+// 			background: black;
+// 			flex: 1;
+// 		}
+// 		&__four {
+// 			background: black;
+// 			flex: 1;
+// 		}
+// 	}
+// }
 
 section {
-	margin-top: 8rem;
+	margin-top: 20rem;
 }
 
 .shadow {
@@ -98,10 +112,13 @@ li {
 	list-style: none;
 }
 
+img {
+	width: 100%;
+	display: block;
+	height: auto;
+}
+
 // font
 
 // font-family: 'Dancing Script', cursive;
 // font-family: 'David Libre', serif;
-.i {
-	min-height: 100vh;
-}
