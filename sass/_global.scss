@@ -89,7 +89,14 @@ body {
 }
 
 section {
-	margin-top: 20rem;
+	margin-top: 8rem;
+
+	@media screen and (min-width: 768px) {
+		margin-top: 10rem;
+	}
+	@media screen and (min-width: 1024px) {
+		margin-top: 20rem;
+	}
 }
 
 .shadow {
@@ -116,6 +123,10 @@ img {
 	width: 100%;
 	display: block;
 	height: auto;
+}
+
+.img-menu {
+	width: 60%;
 }
 
 // font

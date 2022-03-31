@@ -105,7 +105,19 @@ body {
 }
 
 section {
-  margin-top: 20rem;
+  margin-top: 8rem;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    margin-top: 20rem;
+  }
 }
 
 .shadow {
@@ -132,6 +144,10 @@ img {
   width: 100%;
   display: block;
   height: auto;
+}
+
+.img-menu {
+  width: 60%;
 }
 
 .nav-background--show {
@@ -173,6 +189,65 @@ img {
 
 .nav__hamburger {
   cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.nav__menu {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.993);
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+@media screen and (min-width: 1025px) {
+  .nav__menu {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .nav__menu {
+    width: 30%;
+  }
+}
+
+.nav__menu__close {
+  position: absolute;
+  top: 8rem;
+  right: 2.5rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1025px) {
+  .nav__menu__close {
+    right: 6rem;
+  }
+}
+
+.nav__menu__items {
+  line-height: 9rem;
+}
+
+.nav__menu__items a {
+  font-size: 6rem;
+  color: black;
+  font-family: "David Libre", serif;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   opacity: 0;
@@ -431,16 +506,38 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .offers__cards {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    min-height: 100vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .offers__cards__two {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin: 2rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .offers__cards__two {
+    margin: 0;
+  }
 }
 
 .offers__cards__three {
@@ -467,12 +564,37 @@ img {
   position: absolute;
   bottom: 20%;
   right: 2.2rem;
-  font-size: 4.4rem;
+  font-size: 3.4rem;
+}
+
+@media screen and (min-width: 425px) {
+  .text {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 4.4rem;
+  }
 }
 
 .position {
-  width: 80%;
+  width: 100%;
   position: relative;
+}
+
+@media screen and (min-width: 425px) {
+  .position {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .position {
+    width: 80%;
+  }
 }
 
 .about-title {
@@ -484,10 +606,24 @@ img {
 }
 
 .about {
-  margin-top: 10rem;
+  margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .about {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 10rem;
+  }
 }
 
 .about__me {
@@ -499,18 +635,48 @@ img {
       align-self: center;
 }
 
+@media screen and (min-width: 768px) {
+  .about__me {
+    width: 80%;
+  }
+}
+
 .about__me__box {
-  margin-left: 20rem;
+  padding: 2rem;
+  margin-bottom: 8rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .about__me__box {
+    margin-left: 6rem;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .about__me__box {
+    margin-left: 10rem;
+    padding: 0;
+    margin-bottom: 0;
+  }
 }
 
 .about__me__box__link {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   letter-spacing: 1.2px;
   border: 1px solid white;
-  padding: 1.5rem 4.5rem;
+  padding: 1.2rem 3.5rem;
   font-family: "David Libre", serif;
   letter-spacing: 1.4px;
   opacity: 0.9;
+}
+
+@media screen and (min-width: 1024px) {
+  .about__me__box__link {
+    padding: 1.5rem 4.5rem;
+    font-size: 1.9rem;
+  }
 }
 
 .about__me__name {
@@ -521,14 +687,21 @@ img {
 
 .about__me__text {
   margin: 3rem 0 6rem;
-  max-width: 90%;
-  font-size: 1.9rem;
+  max-width: 100%;
+  font-size: 1.6rem;
   text-align: start;
   line-height: 31.75px;
   letter-spacing: 1.2px;
   font-family: "David Libre", serif;
   letter-spacing: 1.4px;
   opacity: 0.9;
+}
+
+@media screen and (min-width: 1024px) {
+  .about__me__text {
+    max-width: 90%;
+    font-size: 1.9rem;
+  }
 }
 
 .about__img {
@@ -539,11 +712,20 @@ img {
 
 .about__img__box {
   position: relative;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .about__img__box__dec {
   width: 30%;
   position: absolute;
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .about__img__box__dec {
+    display: block;
+  }
 }
 
 .about__img__box__dec--one {
@@ -558,8 +740,14 @@ img {
 
 .about__img img {
   margin: 0 auto;
-  width: 60%;
+  width: 100%;
   z-index: 10;
+}
+
+@media screen and (min-width: 1024px) {
+  .about__img img {
+    width: 80%;
+  }
 }
 
 .social-title {
@@ -582,7 +770,7 @@ img {
 }
 
 .social a {
-  font-size: 8rem;
+  font-size: 2rem;
   letter-spacing: 2rem;
   line-height: 1.9;
   position: relative;
@@ -592,21 +780,16 @@ img {
   opacity: 0.9;
 }
 
-.social a::after {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+@media screen and (min-width: 768px) {
+  .social a {
+    font-size: 5rem;
+  }
 }
 
-.social a:hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  top: 50%;
-  left: 0;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media screen and (min-width: 1024px) {
+  .social a {
+    font-size: 8rem;
+  }
 }
 
 .footer {

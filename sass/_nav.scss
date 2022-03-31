@@ -32,4 +32,53 @@
 		transition: all 0.5s ease;
 		opacity: 0;
 	}
+
+	&__menu {
+		position: fixed;
+		background: rgba(255, 255, 255, 0.993);
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 100;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translateX(100%);
+
+		@media screen and (min-width: 1025px) {
+			width: 50%;
+		}
+
+		@media screen and (min-width: 1500px) {
+			width: 30%;
+		}
+
+		&__close {
+			position: absolute;
+			top: 8rem;
+			right: 2.5rem;
+			cursor: pointer;
+
+			@media screen and (min-width: 1025px) {
+				right: 6rem;
+			}
+		}
+
+		&__items {
+			line-height: 9rem;
+
+			a {
+				font-size: 6rem;
+				color: black;
+				font-family: "David Libre", serif;
+				transition: all 0.5s ease;
+				opacity: 0;
+
+				// &:hover {
+				// 	color: rgb(228, 174, 50);
+				// }
+			}
+		}
+	}
 }
